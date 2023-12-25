@@ -32,7 +32,7 @@ body{
 
 /* tabellone */
 
-.table{
+.board{
     width: 500px;
     height: 500px;
     border: 1px solid white;
@@ -64,7 +64,7 @@ ol li{
         
     }
 
-    .table-section{
+    .board-section{
         margin-bottom: 20px;
     }
 
