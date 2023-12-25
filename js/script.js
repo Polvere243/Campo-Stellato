@@ -1,7 +1,7 @@
 // recupero gli elementi dal DOM
 
 const counter = document.querySelector(".score-counter");
-const gameBoard = document.querySelector(".board");
+const gameBoard = document.querySelector(".grid");
 const endGameScreen = document.querySelector(".end-game");
 const endGameMessage = document.querySelector(".end-game-text");
 const playAgain = document.querySelector(".restart");
@@ -21,3 +21,18 @@ while (starsList.length < totalStars){
     if (!starsList.includes(number)) starsList.push(number);
 }
 console.log(starsList);
+
+// riempio la griglia 
+
+let isCellEven = false;
+let isRowEvene = false;
+
+for (let i = 1; i <= totalCells; i++) {
+    // creo un elemento e gli do la classe "cell"
+    const cell = document.createElement("div");
+    cell.classList.add("cell");
+
+    gameBoard.appendChild(cell);
+    
+}
+
