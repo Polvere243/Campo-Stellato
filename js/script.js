@@ -25,7 +25,7 @@ console.log(starsList);
 // riempio la griglia 
 
 let isCellEven = false;
-let isRowEvene = false;
+let isRowEven = false;
 
 for (let i = 1; i <= totalCells; i++) {
     // creo un elemento e gli do la classe "cell"
@@ -33,6 +33,17 @@ for (let i = 1; i <= totalCells; i++) {
     cell.classList.add("cell");
 
     gameBoard.appendChild(cell);
-    
+
+    isCellEven = i % 2 === 0;
+    // scurisco una casella se sono pari sia la casella sia la riga
+    if (isRowEven && isCellEven) cell.classList.add("cell-dark");
+
+    // scurisco una casella se sono dispari sia la casella sia la riga
+
+    if (!isRowEven && !isCellEven) cell.classList.add("cell-dark");
+
+    // se sono alla fine della riga
+    if (i % 10 === 0) isRowEven = !isRowEven;
+     
 }
 
