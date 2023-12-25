@@ -10,7 +10,9 @@ console.log(counter, gameBoard, endGameScreen, endGameMessage, playAgain);
 
 const totalCells = 100;
 const totalStars = 16;
-const maxScore = totalCells - totalStars;
+const maxScore = totalCells - totalStars -brainCell;
+const chestCell = 1;
+const brainCell = 1;
 const starsList = [];
 let score = 0;
 
@@ -54,8 +56,57 @@ for (let i = 1; i <= totalCells; i++) {
         if (starsList.includes(i)) {
             // se è una stella
             cell.classList.add("cell-star");
-            
+
+        } else {
+            // se non lo è
+            cell.classList.add("cell-clicked");
         }
     })
 }
 
+// Funzioni
+
+// aggiornare il punteggio
+
+function updateScore() {
+    // Incremento lo score
+    score++;
+    // lo inserisco nel contatore
+    counter.innerText = String(score).padStart(5, 0);
+    // controlliamo se l'utente ha vinto
+    if (score === maxScore) endGame(true);
+}
+
+// decretare la fine del gioco
+function endGame(isVictory){
+    if (isVictory === true){
+        // diamo il verde all'overlay e scriviamo il messaggio di vittoria
+        endGameScreen.classList.add("win");
+        endGameMessage.innerHTML = "YOU<br>WIN";
+    } else {
+        // riveliamo tutte le stelle
+        revealAllStars();
+    }
+    endGameScreen.classList.remove("hidden");
+}
+
+// ricaricare la pagina
+function restart() {
+    location.reload();
+}
+
+// rivelare tutte le stelle
+function revealAllStars() {
+    const cells = document.querySelectorAll(".cell");
+    for (let i = 1; i <= cells.length; i++) {
+        // controllo se la cella sia una stella
+        if (starsList.includes(i)) {
+            const cellToReveal = cells[i - 1];
+            cellToReveal.classList.add("cell-bomb");
+        }
+    }
+}
+
+// click sul tasto rigioca
+
+playAgain.addEventListener("click", restart);
