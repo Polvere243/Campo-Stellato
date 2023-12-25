@@ -6,6 +6,8 @@
     color: white;
 }
 
+/* generici */
+
 body{
     background-image: url(../img/Sfondo.png);
 }
@@ -15,3 +17,11 @@ body{
     margin: 0 auto;
     text-align: center;
 }
+
+/* sezione del punteggio */
+
+.score{
+    display: flex;
+    justify-content: space-between;
+}
+
