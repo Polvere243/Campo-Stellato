@@ -84,6 +84,12 @@ h4{
     background-color: rgba(242, 52, 31, 0.656);
 }
 
+.cell.cell-brain{
+    background-image: url(../img/Cervello.png);
+    background-size: contain;
+    background-color: rgba(242, 52, 31, 0.656);
+}
+
 .cell-clicked,
 .cell-star{
     cursor: not-allowed;
