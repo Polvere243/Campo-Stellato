@@ -59,6 +59,11 @@ ol li{
     .container{
         max-width: 700px;
         display: flex;
+        align-items: center;
         gap: 10px;
+    }
+
+    .table-section{
+        margin-bottom: 20px;
     }
 }
