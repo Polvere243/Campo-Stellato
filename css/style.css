@@ -88,6 +88,10 @@ body{
 	justify-content: center;
 }
 
+.win{
+    background-color: rgba(73, 177, 73, 0.687);
+}
+
 .restart{
     padding: 5px 10px;
     background-color: rgb(242, 52, 31);
