@@ -14,7 +14,7 @@ const maxScore = totalCells - totalStars;
 const starsList = [];
 let score = 0;
 
-// generare bombe casuali
+// generare stelle casuali
 
 while (starsList.length < totalStars){
     const number = Math.floor(Math.random() * totalStars) + 1;
@@ -45,5 +45,17 @@ for (let i = 1; i <= totalCells; i++) {
     // se sono alla fine della riga
     if (i % 10 === 0) isRowEven = !isRowEven;
      
+    // gestisco il click sulla cella
+
+    cell.addEventListener("click", function() {
+        // controllo che la cella NON sia stata già cliccata
+        if (cell.classList.contains("cell-clicked")) return;
+
+        if (starsList.includes(i)) {
+            // se è una stella
+            cell.classList.add("cell-star");
+            
+        }
+    })
 }
 
