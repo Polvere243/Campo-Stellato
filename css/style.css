@@ -59,6 +59,11 @@ body{
 	justify-content: center;
 }
 
+.restart{
+    padding: 5px 10px;
+    background-color: rgb(242, 52, 31);
+}
+
 
 /* regole */
 
