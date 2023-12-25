@@ -34,11 +34,16 @@ h4{
 
 /* sezione del punteggio */
 
-.score{
+.score,
+.score-counter{
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    line-height: 72px;
+    font-size: 24px;
+    vertical-align: middle;
 }
+
+
 
 /* tabellone */
 
