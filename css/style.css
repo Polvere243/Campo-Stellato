@@ -39,12 +39,13 @@ body{
 /* tabellone */
 
 .board{
-    width: 500px;
-    height: 500px;
+    
     border: 1px solid white;
     position: relative;
 }
 .grid{
+    width: 500px;
+    height: 500px;
     display: flex;
 	flex-wrap: wrap;
 	align-content: flex-start;
