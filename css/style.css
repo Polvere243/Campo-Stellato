@@ -44,6 +44,11 @@ body{
     border: 1px solid white;
     position: relative;
 }
+.grid{
+    display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
 
 /* tabelle */
 
