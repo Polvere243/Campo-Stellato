@@ -22,6 +22,12 @@ body{
     text-align: center;
 }
 
+/* utili */
+
+.hidden{
+    display: none;
+}
+
 /* sezione del punteggio */
 
 .score{
@@ -40,7 +46,18 @@ body{
 }
 
 /* overlay */
-
+.end-game{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(242, 52, 31, 0.656);
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
 
 
 /* regole */
