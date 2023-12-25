@@ -11,6 +11,9 @@
 
 body{
     background-image: url(../img/Sfondo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .container{
@@ -50,3 +53,12 @@ ol li{
     font-size: 16px;
 }
 
+/* responsive */
+
+@media screen and (min-width: 769px){
+    .container{
+        max-width: 700px;
+        display: flex;
+        gap: 10px;
+    }
+}
