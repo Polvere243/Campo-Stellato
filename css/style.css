@@ -55,15 +55,39 @@ ol li{
 
 /* responsive */
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 768px){
     .container{
         max-width: 700px;
         display: flex;
         align-items: center;
         gap: 10px;
+        
     }
 
     .table-section{
         margin-bottom: 20px;
     }
+
+    ol li{
+        font-size: 24px;
+    }
+    
+}
+
+@media screen and (min-width: 992px){
+    .container{
+        max-width: 900px;
+        gap: 20px;
+    }    
+
+    ol li{
+        font-size: 32px;
+    }
+}
+
+@media screen and (min-width: 1080px){
+    .container{
+        max-width: 1060px;
+        gap: 50px;
+    }    
 }
